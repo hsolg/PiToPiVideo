@@ -1,0 +1,1 @@
+gst-launch-1.0 rpicamsrc ! 'video/x-h264, width=1280, height=720, framerate=30/1, profile=high' ! queue ! rtph264pay ! udpsink port=5000
