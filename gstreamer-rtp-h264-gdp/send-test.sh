@@ -1,3 +1,3 @@
 #!/bin/sh
 
-gst-launch-0.10 -v videotestsrc ! gdppay ! tcpserversink host=$SRC_IP port=2222
+gst-launch-1.0 -v videotestsrc ! gdppay ! tcpserversink host=$SRC_IP port=2222
