@@ -46,7 +46,7 @@ Scaling reduces the framerate significantly.
 
 TODO
 
-## Sinks
+## Video sinks
 
 ### Works well
 
