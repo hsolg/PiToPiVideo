@@ -1,7 +1,11 @@
 # PiToPiVideo
 Two-way video for Raspberry Pi
 
-## Sending end
+## Automatic streaming
+
+### X version
+
+#### Sending end
 
 Copy start-sending.sh to /home/pi.
 
@@ -15,7 +19,7 @@ Add to .config/lxsession/LXDE-pi/autostart:
 ```
 @./send.sh
 ```
-## Receiving end
+#### Receiving end
 
 Copy start-receiving.sh to /home/pi.
 
@@ -35,3 +39,57 @@ size of the stream doesn't match:
 ```
 videoscale ! video/x-raw,width=1080,height=720 !
 ```
+
+Scaling reduces the framerate significantly.
+
+### Framebuffer version
+
+TODO
+
+## Sinks
+
+### Works well
+
+#### ximagesink
+
+Needs X.
+
+#### fbdevsink
+
+Framebuffer version. Doesn't need X.
+
+### Very slow
+
+#### autovideosink
+
+Uses glimagesink.
+
+#### cluttersink
+
+#### glimagesink
+
+### Cool effects
+
+#### aasink
+
+Fails because of missing font.
+
+#### cacasink
+
+Nice ASCII effect, but very slow.
+
+### Doesn't work
+
+#### xvimagesink
+
+No Xv port available.
+
+### Not tested
+
+#### intervideosink
+
+Cannot be used effectively with gst-launch.
+
+#### waylandsink
+
+Depends on Wayland.
