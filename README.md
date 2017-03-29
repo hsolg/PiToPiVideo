@@ -3,6 +3,8 @@ Two-way video for Raspberry Pi
 
 ## Sending end
 
+Copy start-sending.sh to /home/pi.
+
 Create /home/pi/send.sh:
 ```sh
 (cd src/PiToPiVideo/ && SRC_IP=192.168.0.100 ./start-sending.sh)
@@ -14,6 +16,8 @@ Add to .config/lxsession/LXDE-pi/autostart:
 @./send.sh
 ```
 ## Receiving end
+
+Copy start-receiving.sh to /home/pi.
 
 Create /home/pi/receive.sh:
 ```sh
